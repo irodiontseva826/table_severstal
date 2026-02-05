@@ -1,0 +1,10 @@
+.table {
+  background-color: grey;
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  border: 1px solid #fff;
+  padding: 10px;
+}
