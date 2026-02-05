@@ -1,24 +1,21 @@
+import { TableRow } from "../TableRow";
 import styles from "./Table.module.css";
 
 export const Table = ({ data }) => {
   return (
     <table className={styles.table}>
       <thead>
-        <tr>
-          <td>Name</td>
-          <td>Email</td>
-          <td>Balance</td>
-          <td>Active</td>
+        <tr className={styles.headRow}>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Balance</th>
+          <th>Active</th>
         </tr>
       </thead>
       <tbody>
         {data.map((item) => (
-          <tr key={item.id}>
-            <td>{item.name}</td>
-            <td>{item.email}</td>
-            <td>{item.balance}</td>
-            <td>{item.isActive ? "Yes" : "No"}</td>
-          </tr>
+          <TableRow key={item.id} item={item} level={0}/>
         ))}
       </tbody>
     </table>

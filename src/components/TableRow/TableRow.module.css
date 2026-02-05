@@ -1,0 +1,45 @@
+.row {
+  transition: background-color 0.3s;
+}
+
+.row:hover {
+  background-color: rgb(87, 131, 196);
+}
+
+.level0 {
+  background-color: rgb(49, 95, 169);
+}
+
+.level1 {
+  background-color: rgb(49, 95, 169, 0.7);
+}
+
+.level2 {
+  background-color: rgb(49, 95, 169, 0.4);
+}
+
+.level3 {
+  background-color: rgb(49, 95, 169, 0.1);
+}
+
+.firstCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.firstCell[data-is-open="true"] .arrow {
+  transform: rotate(-180deg);
+}
+
+.spacer {
+  flex-shrink: 0;
+  width: 20px;
+}
