@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./TableRow.module.css";
-import Arrow from "../../assets/icons/Arrow.svg";
+import Chevron from "../../assets/icons/Chevron.svg";
 
 export const TableRow = ({ item, level }) => {
   const hasChildren = item.children.length > 0;
@@ -19,7 +19,7 @@ export const TableRow = ({ item, level }) => {
           >
             {hasChildren ? (
               <img
-                src={Arrow}
+                src={Chevron}
                 onClick={() => setIsOpen(!isOpen)}
                 className={styles.arrow}
               />
