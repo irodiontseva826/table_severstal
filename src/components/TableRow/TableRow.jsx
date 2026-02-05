@@ -8,7 +8,9 @@ export const TableRow = ({ item, level }) => {
 
   return (
     <>
-      <tr className={`${styles.row} ${styles[`level${level}`]}`}>
+      <tr
+        className={`${styles.row} ${styles[`level${level}`]} ${item.matchesFilter === false ? styles.dimmed : ""}`}
+      >
         <td>
           <div
             className={styles.firstCell}
@@ -32,7 +34,7 @@ export const TableRow = ({ item, level }) => {
         <td>{item.balance}</td>
         <td>{item.isActive ? "Yes" : "No"}</td>
       </tr>
-      
+
       {isOpen &&
         item.children.map((child) => (
           <TableRow key={child.id} item={child} level={level + 1} />
